@@ -1,0 +1,7 @@
+apiVersion: cdf.redhat.com/v1alpha1
+kind: CodigoFonte
+metadata:
+  name: codigofonte-sample
+spec:
+  # Add fields here
+  foo: bar

@@ -1,0 +1,24 @@
+# permissions for end users to edit codigofontes.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: codigofonte-editor-role
+rules:
+- apiGroups:
+  - cdf.redhat.com
+  resources:
+  - codigofontes
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - cdf.redhat.com
+  resources:
+  - codigofontes/status
+  verbs:
+  - get

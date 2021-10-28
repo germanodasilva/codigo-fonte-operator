@@ -1,0 +1,20 @@
+# permissions for end users to view codigofontes.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: codigofonte-viewer-role
+rules:
+- apiGroups:
+  - cdf.redhat.com
+  resources:
+  - codigofontes
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - cdf.redhat.com
+  resources:
+  - codigofontes/status
+  verbs:
+  - get
